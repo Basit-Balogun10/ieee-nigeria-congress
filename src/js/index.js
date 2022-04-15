@@ -65,3 +65,5 @@ const toggleThemeMode = () => {
 }
 
 themeToggleBtn.addEventListener('click', toggleThemeMode);
+topBtn.addEventListener('click', jumpToTop);
+bottomBtn.addEventListener('click', jumpToBottom);
