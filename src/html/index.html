@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IEEE Nigeria Conference 2022</title>
+    <script
+      src="https://kit.fontawesome.com/e26e4a68b3.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -22,18 +26,22 @@
     />
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/globals.css" />
+    <script
+      src="https://kit.fontawesome/8e8ce04397.js"
+      crossorigin="anonymous"
+    ></script>
     <script>
       tailwind.config = {
-        darkMode: "class",
+        darkMode: 'class',
         theme: {
           extend: {
             fontFamily: {
-              inter: ["Inter", "sans-serif"],
-              poppins: ["Poppins", "sans-serif"],
+              inter: ['Inter', 'sans-serif'],
+              poppins: ['Poppins', 'sans-serif'],
             },
             colors: {
-              darkGreen: "#328704",
-              lightGreen: "#98E8BC",
+              darkGreen: '#328704',
+              lightGreen: '#98E8BC',
             },
           },
         },
@@ -41,13 +49,13 @@
 
       // On page load or when changing themes, best to add inline in `head` to avoid FOUC
       if (
-        localStorage.getItem("ascf-theme") === "dark" ||
-        (!("ascf-theme" in localStorage) &&
-          window.matchMedia("(prefers-color-scheme: dark)").matches)
+        localStorage.getItem('ascf-theme') === 'dark' ||
+        (!('ascf-theme' in localStorage) &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches)
       ) {
-        document.documentElement.classList.add("dark");
+        document.documentElement.classList.add('dark');
       } else {
-        document.documentElement.classList.remove("dark");
+        document.documentElement.classList.remove('dark');
       }
     </script>
   </head>
@@ -55,15 +63,15 @@
   <body class="text-gray-500 dark:text-gray-400 dark:bg-gray-900">
     <button
       id="toTopBtn"
-      class="hidden fixed bottom-10 right-12 z-50 border-none outline-none bg-gray-900 text-lightGreen dark:text-gray-900 dark:bg-lightGreen hover:color-lightGreen cursor-pointer rounded-full w-12 h-12 hover:opacity-90 dark:opacity-80 dark:hover:opacity-90"
+      class="hidden transition-all fixed bottom-6 right-6 z-50 border-none outline-none bg-gray-900 text-lightGreen dark:text-gray-900 dark:bg-lightGreen hover:color-lightGreen cursor-pointer rounded-full w-8 h-8 hover:opacity-90 dark:opacity-80 dark:hover:opacity-90"
     >
-      <i class="fa fa-angle-up fa-3x"></i>
+      <i class="fa fa-angle-up fa-2x"></i>
     </button>
     <button
       id="toBottomBtn"
-      class="fixed bottom-10 right-12 z-50 border-none outline-none bg-gray-900 text-lightGreen dark:text-gray-900 dark:bg-lightGreen hover:color-lightGreen cursor-pointer rounded-full w-12 h-12 hover:opacity-90 dark:opacity-80 dark:hover:opacity-90"
+      class="transition-all fixed bottom-6 right-6 z-50 border-none outline-none bg-gray-900 text-lightGreen dark:text-gray-900 dark:bg-lightGreen hover:color-lightGreen cursor-pointer rounded-full w-8 h-8 hover:opacity-90 dark:opacity-80 dark:hover:opacity-90"
     >
-      <i class="fa fa-angle-down fa-3x"></i>
+      <i class="fa fa-angle-down fa-2x"></i>
     </button>
     <section id="hero">
       <header>
@@ -81,6 +89,7 @@
           <button
             id="theme-toggle"
             type="button"
+            title="Toggle theme"
             class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
           >
             <svg
@@ -142,46 +151,91 @@
       </section>
       <img src="" alt="" />
     </section>
-    <section id="registration">
-      <section>
-        <h4>We are</h4>
-        <h3>Coming Soon</h3>
-
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, cum
-          fuga! Fugit commodi obcaecati consequuntur quam id dolor porro, vel
-          aliquid sequi quo.
-        </p>
-
-        <a href="">SIGN ME UP</a>
-      </section>
-      <section>
-        <section>
-          <p>54</p>
-          <p>DAYS</p>
+    <section id="registration"
+        class="text-gray-900 bg-gradient-to-r from-lightGreen to-darkGreen mt-6 flex items-center flex-wrap justify-around py-8 px-4">
+        <section class="shrink text-center">
+            <h1 class="text-4xl font-extrabold uppercase tracking-widest">It is Happening Soon</h1>
+    
+            <p class="text-sm my-4 max-w-fit text-gray-900/60 font-semibold tracking-wide">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates sequi, natus optio esse, tenetur excepturi quidem ducimus ratione repellat, expedita saepe consequatur. Quae, repellat laboriosam sapiente velit dolore tempora iste!
+            </p>
+    
+            <a href=""
+                class="bg-transparent hover:bg-gray-900 text-gray-900 font-semibold hover:text-white py-2 px-4 border-2 border-solid border-gray-900 rounded hover:border-transparent transition-all ease-in-out delay-150"
+                style="">SIGN ME UP</a>
         </section>
-        <section>
-          <p>20</p>
-          <p>HOURS</p>
-        </section>
-        <section>
-          <p>53</p>
-          <p>MINUTES</p>
-        </section>
-        <section>
-          <p>06</p>
-          <p>SECONDS</p>
+        <section class="justify-around main-section grow flex flex-initial text-center mt-8 space-x-6 lg:max-w-[40rem]">
+            <section class="test flex-1">
+                <div class="countdown-div items-center justify-center rounded-md border border-lightGreen bg-lightGreen mb-4 max-w-[-22rem] shadow-lg shadow-black relative lg:after:right-[-3%] before:absolute before:bg-gray-900 before:w-[15px] before:-left-1 before:h-[8px] before:rotate-90 after:absolute after:bg-gray-900 after:w-[15px] after:-right-1 after:h-[8px] after:-rotate-90">
+                    <h2 id="days-left" class="font-extrabold text-gray-900 text-3xl lg:py-8 sm:py-[1.5rem]">00</h2>
+                    <div class="absolute top-1/2 z-10 h-px bg-gray-900 w-full"></div>
+                </div>
+                <p class="font-semibold text-sm text-gray-900/60">DAYS</p>
+            </section>
+            <section class="test flex-1">
+                <div
+                    class="countdown-div items-center justify-center rounded-md border border-lightGreen bg-lightGreen mb-4 max-w-[-22rem] shadow-lg shadow-black relative lg:after:right-[-3%] before:absolute before:bg-gray-900 before:w-[15px] before:-left-1 before:h-[8px] before:rotate-90 after:absolute after:bg-gray-900 after:w-[15px] after:-right-1 after:h-[8px] after:-rotate-90">
+                    <h2 id="hours-left" class="font-extrabold text-gray-900 text-3xl lg:py-8 sm:py-[1.5rem]">00</h2>
+                    <div class="absolute top-1/2 z-10 h-px bg-gray-900 w-full"></div>
+                </div>
+                <p class="font-semibold text-sm text-gray-900/60">HOURS</p>
+            </section>
+            <section class="test flex-1">
+                <div
+                    class="countdown-div items-center justify-center rounded-md border border-lightGreen bg-lightGreen mb-4 max-w-[-22rem] shadow-lg shadow-black relative lg:after:right-[-3%] before:absolute before:bg-gray-900 before:w-[15px] before:-left-1 before:h-[8px] before:rotate-90 after:absolute after:bg-gray-900 after:w-[15px] after:-right-1 after:h-[8px] after:-rotate-90">
+                    <h2 id="minutes-left" class="font-extrabold text-gray-900 text-3xl lg:py-8 sm:py-[1.5rem]">00</h2>
+                    <div class="absolute top-1/2 z-10 h-px bg-gray-900 w-full"></div>
+                </div>
+                <p class="font-semibold text-sm text-gray-900/60">MINUTES</p>
+            </section>
+            <section class="test flex-1">
+                <div
+                    class="countdown-div items-center justify-center rounded-md border border-lightGreen bg-lightGreen mb-4 max-w-[-22rem] shadow-lg shadow-black relative lg:after:right-[-3%] before:absolute before:bg-gray-900 before:w-[15px] before:-left-1 before:h-[8px] before:rotate-90 after:absolute after:bg-gray-900 after:w-[15px] after:-right-1 after:h-[8px] after:-rotate-90">
+                    <h2 id="seconds-left" class="font-extrabold text-gray-900 text-3xl lg:py-8 sm:py-[1.5rem]">00</h2>
+                    <div class="absolute top-1/2 z-10 h-px bg-gray-900 w-full"></div>
+                </div>
+                <p class="font-semibold text-sm text-gray-900/60">SECONDS</p>
+            </section>
         </section>
       </section>
     </section>
-    <section id="gallery">
-      <div id="default-carousel" class="relative" data-carousel="slide">
+    <section
+      id="gallery"
+      class="flex justify-center bg-gradient-to-r from-lightGreen via-darkGreen to-darkGreen text-gray-900"
+    >
+      <section class="flex flex-1 flex-col p-2" style="flex-grow: 1">
+        <section class="flex-1"></section>
+        <section class="flex-1 flex justify-end items-center space-x-4">
+          <i class="fa fa-camera text-5xl"></i>
+          <section class="">
+            <h3 class="font-extrabold text-2xl">Our</h3>
+            <h2 class="font-extrabold text-4xl">Gallery</h2>
+          </section>
+        </section>
+        <section class="flex-1">
+          <p class="text-sm">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum
+            tenetur aliquid iusto rem velit nostrum, tempora, minima quia,
+            voluptatem nobis fuga modi! Voluptas vel corrupti accusamus, placeat
+            veniam maiores ad.
+          </p>
+        </section>
+      </section>
+      <div
+        id="default-carousel"
+        class="relative flex-1"
+        data-carousel="slide"
+        style="flex-grow: 2"
+      >
         <!-- Carousel wrapper -->
         <div
           class="overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96"
         >
           <!-- Item 1 -->
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <div
+            class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20"
+            data-carousel-item=""
+          >
             <span
               class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800"
               >First Slide</span
@@ -193,7 +247,10 @@
             />
           </div>
           <!-- Item 2 -->
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <div
+            class="duration-700 ease-in-out absolute inset-0 transition-all transform z-10 translate-x-full"
+            data-carousel-item=""
+          >
             <img
               src="../../assets/about-image.jpg"
               class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2"
@@ -201,7 +258,10 @@
             />
           </div>
           <!-- Item 3 -->
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <div
+            class="duration-700 ease-in-out absolute inset-0 transition-all transform -translate-x-full z-10"
+            data-carousel-item=""
+          >
             <img
               src="../../assets/hero-background.png"
               class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2"
@@ -215,21 +275,21 @@
         >
           <button
             type="button"
-            class="w-3 h-3 rounded-full bg-gray-800/50 hover:bg-gray-800"
-            aria-current="false"
+            class="w-3 h-3 rounded-full !bg-gray-800/50 !hover:bg-gray-800 bg-white dark:bg-gray-800"
+            aria-current="true"
             aria-label="Slide 1"
             data-carousel-slide-to="0"
           ></button>
           <button
             type="button"
-            class="w-3 h-3 rounded-full bg-gray-800/50 hover:bg-gray-800"
+            class="w-3 h-3 rounded-full !bg-gray-800/50 !hover:bg-gray-800 bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800"
             aria-current="false"
             aria-label="Slide 2"
             data-carousel-slide-to="1"
           ></button>
           <button
             type="button"
-            class="w-3 h-3 rounded-full bg-gray-800/50 hover:bg-gray-800"
+            class="w-3 h-3 rounded-full !bg-gray-800/50 !hover:bg-gray-800 bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800"
             aria-current="false"
             aria-label="Slide 3"
             data-carousel-slide-to="2"
@@ -239,10 +299,10 @@
         <button
           type="button"
           class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
-          data-carousel-prev
+          data-carousel-prev=""
         >
           <span
-            class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+            class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-gray-800/30 group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-gray-800/70 group-focus:outline-none"
           >
             <svg
               class="w-5 h-5 sm:w-6 sm:h-6 text-gray-800"
@@ -264,10 +324,10 @@
         <button
           type="button"
           class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
-          data-carousel-next
+          data-carousel-next=""
         >
           <span
-            class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+            class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-gray-800/30 group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-gray-800/70 group-focus:outline-none"
           >
             <svg
               class="w-5 h-5 sm:w-6 sm:h-6 text-gray-800"
@@ -288,55 +348,57 @@
         </button>
       </div>
     </section>
-    <section id="conference-activities">
-      <section>
+    <section id="conference-activities" class="md:flex">
+      <section
+        class="p-10 pt-3 md:p-16 md:pt-6 bg-gradient-to-r from-lightGreen to-darkGreen text-gray-800 md:-mr-16"
+      >
         <ul>
-          <li>
-            <section>
-              <h3>Technical Paper Contest</h3>
-              <i class="fa fa-star"></i>
+          <li class="p-3">
+            <section class="flex items-center m-5 ml-0 font-extrabold">
+              <h3 class="mr-2">Technical Paper Contest</h3>
+              <i class="fa-solid fa-compass-drafting text-2xl"></i>
             </section>
 
-            <p>
+            <p class="text-sm font-light">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Molestias, ipsum facilis quam natus alias voluptate porro ut
               ullam, maxime et est facere dolore excepturi quos rem, eaque earum
               veniam quod!
             </p>
           </li>
-          <li>
-            <section>
-              <h3>Engineering Exhibition</h3>
-              <i class="fa fa-star"></i>
+          <li class="mt-0 p-3">
+            <section class="flex items-center m-5 ml-0 font-extrabold">
+              <h3 class="mr-2">Engineering Exhibition</h3>
+              <i class="fa-solid fa-jet-fighter text-2xl"></i>
             </section>
 
-            <p>
+            <p class="text-sm font-light">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Molestias, ipsum facilis quam natus alias voluptate porro ut
               ullam, maxime et est facere dolore excepturi quos rem, eaque earum
               veniam quod!
             </p>
           </li>
-          <li>
-            <section>
-              <h3>Inter-Student Branch Quiz and Competition</h3>
-              <i class="fa fa-star"></i>
+          <li class="mt-0 p-3">
+            <section class="flex items-center m-5 ml-0 font-extrabold">
+              <h3 class="mr-2">Inter-Student Branch Quiz and Competition</h3>
+              <i class="fa-solid fa-book-open-reader text-2xl"></i>
             </section>
 
-            <p>
+            <p class="text-sm font-light">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Molestias, ipsum facilis quam natus alias voluptate porro ut
               ullam, maxime et est facere dolore excepturi quos rem, eaque earum
               veniam quod!
             </p>
           </li>
-          <li>
-            <section>
-              <h3>Sporting Competitions</h3>
-              <i class="fa fa-star"></i>
+          <li class="mt-0 p-3">
+            <section class="flex items-center m-5 ml-0 font-extrabold">
+              <h3 class="mr-2">Sporting Competitions</h3>
+              <i class="fa-solid fa-medal text-2xl"></i>
             </section>
 
-            <p>
+            <p class="text-sm font-light">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Molestias, ipsum facilis quam natus alias voluptate porro ut
               ullam, maxime et est facere dolore excepturi quos rem, eaque earum
@@ -345,59 +407,62 @@
           </li>
         </ul>
       </section>
-
-      <section>
-        <i class="fa fa-car"></i>
+      <section
+        class="hidden md:block md:flex-auto md:w-1/5 md:p-7 md:text-center md:z-10 md:self-center md:text-5xl md:bg-gray-800 dark:text-darkGreen dark:bg-white md:text-white md:rounded-full"
+      >
+        <i class="fa-solid fa-gears"></i>
       </section>
 
-      <section>
+      <section
+        class="flex-auto p-10 pt-3 md:p-20 md:pt-6 bg-white text-gray-800 dark:text-white dark:bg-gray-800 text-white md:-ml-16"
+      >
         <ul>
-          <li>
-            <section>
-              <h3>Industrial Technical Visit</h3>
-              <i class="fa fa-star"></i>
+          <li class="p-3">
+            <section class="flex items-center m-5 ml-0 font-extrabold">
+              <h3 class="mr-2">Industrial Technical Visit</h3>
+              <i class="fa-solid fa-industry text-2xl"></i>
             </section>
 
-            <p>
+            <p class="text-sm font-light">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Molestias, ipsum facilis quam natus alias voluptate porro ut
               ullam, maxime et est facere dolore excepturi quos rem, eaque earum
               veniam quod!
             </p>
           </li>
-          <li>
-            <section>
-              <h3>Company adn Organizaatino Fair</h3>
-              <i class="fa fa-star"></i>
+          <li class="mt-0 p-3">
+            <section class="flex items-center m-5 ml-0 font-extrabold">
+              <h3 class="mr-2">Company and Organization Fair</h3>
+              <i class="fa-solid fa-building text-2xl"></i>
             </section>
 
-            <p>
+            <p class="text-sm font-light">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Molestias, ipsum facilis quam natus alias voluptate porro ut
               ullam, maxime et est facere dolore excepturi quos rem, eaque earum
               veniam quod!
             </p>
           </li>
-          <li>
-            <section>
-              <h3>Panel and Workshop Contest</h3>
-              <i class="fa fa-star"></i>
+          <li class="mt-0 p-3">
+            <section class="flex items-center m-5 ml-0 font-extrabold">
+              <h3 class="mr-2">Panel and Workshop Contest</h3>
+              <i class="fa-regular fa-podium text-2xl"></i>
             </section>
 
-            <p>
+            <p class="text-sm font-light">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Molestias, ipsum facilis quam natus alias voluptate porro ut
               ullam, maxime et est facere dolore excepturi quos rem, eaque earum
               veniam quod!
             </p>
           </li>
-          <li>
-            <section>
-              <h3>Technical Challenge - Robotic Contest</h3>
-              <i class="fa fa-star"></i>
+          <li class="mt-0 p-3">
+            <section class="flex items-center m-5 ml-0 font-extrabold">
+              <h3 class="mr-2">Technical Challenge - Robotic Contest</h3>
+              <i class="fa-solid fa-robot text-2xl"></i>
             </section>
 
-            <p>
+            <p class="text-sm font-light">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Molestias, ipsum facilis quam natus alias voluptate porro ut
               ullam, maxime et est facere dolore excepturi quos rem, eaque earum
@@ -515,4 +580,3 @@
     <script src="../js/index.js"></script>
   </body>
 </html>
-
