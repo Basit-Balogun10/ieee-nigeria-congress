@@ -197,6 +197,7 @@
                 <p class="font-semibold text-sm text-gray-900/60">SECONDS</p>
             </section>
         </section>
+      </section>
     </section>
     <section
       id="gallery"
@@ -406,7 +407,6 @@
           </li>
         </ul>
       </section>
-
       <section
         class="hidden md:block md:flex-auto md:w-1/5 md:p-7 md:text-center md:z-10 md:self-center md:text-5xl md:bg-gray-800 dark:text-darkGreen dark:bg-white md:text-white md:rounded-full"
       >
@@ -472,44 +472,108 @@
         </ul>
       </section>
     </section>
-    <section id="contact">
-      <section>
-        <h3>CONTACT US</h3>
+    <section
+      id="contact"
+      class="px-36 py-12 bg-white dark:bg-slate-900 text-gray-800 dark:text-gray-200 w-screen"
+    >
+      <div
+        class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-4 xl:grid-cols-4 gap-2"
+      >
+        <section class="col-span-2 font-semibold px-5">
+          <h3 class="font-bold text-xs mb-16">CONTACT US</h3>
 
-        <form>
-          <input name="name" type="text" />
-          <label for="name">Name</label>
-          <input name="email" type="text" />
-          <label for="email">Email</label>
-          <input name="subject" type="text" />
-          <label for="subject">Subject</label>
+          <form>
+            <div class="relative z-0 mb-6 w-full group">
+              <input
+                type="name"
+                name="floating_name"
+                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                placeholder=" "
+                required=""
+              />
+              <label
+                for="floating_name"
+                class="absolute text-xs text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >Name</label
+              >
+            </div>
+            <div class="relative z-0 mb-6 w-full group">
+              <input
+                type="email"
+                name="floating_email"
+                id="floating_email"
+                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                placeholder=" "
+                required="*"
+              />
+              <label
+                for="floating_email"
+                class="absolute text-xs text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >Email</label
+              >
+            </div>
+            <div class="relative z-0 mb-6 w-full group">
+              <input
+                type="subject"
+                name="floating_subject"
+                id="floating_subject"
+                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                placeholder=" "
+                required="*"
+              />
+              <label
+                for="floating_subject"
+                class="absolute text-xs text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >Subject</label
+              >
+            </div>
+            <div class="relative z-0 mb-6 w-full group">
+              <textarea
+                name="message"
+                id="floating-message"
+                type="Message"
+                cols="30"
+                rows="3"
+                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                placeholder=" "
+              ></textarea>
+              
+              <label
+                for="floating_message"
+                class="absolute text-xs text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >Message</label
+              >
+            </div>
 
-          <label for="message">Message</label>
-          <textarea name="message" id="" cols="30" rows="10"></textarea>
+            <button
+              type="submit"
+              class="text-white dark:text-gray-800 bg-green-600 dark:bg-green-200 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+            >
+              Submit
+            </button>
+          </form>
+        </section>
+        <section class="sm:w-16 md:w-28 lg:w-36 xl:w-48">
+          <h3 class="font-bold text-xs mb-16 ml-10">QUICK MENU</h3>
 
-          <button type="submit">Send</button>
-        </form>
-      </section>
-      <section>
-        <h3>QUCIK MENU</h3>
+          <ul class="flex flex-col ml-10 gap-3 text-xs">
+            <li><a href="#about" class="scroll-smooth">About</a></li>
+            <li><a href="#registration" class="scroll-smooth">Register</a></li>
+            <li><a href="#gallery" class="scroll-smooth">Gallery</a></li>
+            <li><a href="#conference-activities" class="scroll-smooth">Activities</a></li>
+            <li><a href="#contact" class="scroll-smooth">Contact</a></li>
+          </ul>
+        </section>
+        <section>
+          <h3 class="font-bold text-xs mb-16">SOCIALS</h3>
 
-        <ul>
-          <li><a>About</a></li>
-          <li><a>Register</a></li>
-          <li><a>Gallery</a></li>
-          <li><a>Activities</a></li>
-          <li><a>Contact</a></li>
-        </ul>
-      </section>
-      <section>
-        <h3>SOCIALS</h3>
-
-        <ul>
-          <li><a>Facebook</a></li>
-          <li><a>Twitter</a></li>
-          <li><a>Instagram</a></li>
-        </ul>
-      </section>
+          <ul class="flex flex-col gap-3 text-xs">
+            <li><a href="http://fb.me/stecon2022">Facebook</a></li>
+            <li><a href="https://twitter.com/stecon2022">Twitter</a></li>
+            <li><a href="http://instagram.com/stecon2022">Instagram</a></li>
+          </ul>
+        </section>
+      </div>
     </section>
 
     <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
