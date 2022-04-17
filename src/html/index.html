@@ -1,582 +1,446 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IEEE Nigeria Conference 2022</title>
-    <script
-      src="https://kit.fontawesome.com/e26e4a68b3.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/e26e4a68b3.js" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Poppins&family=Inter&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/flowbite@1.4.1/dist/flowbite.min.css"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&family=Inter&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.1/dist/flowbite.min.css" />
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/globals.css" />
-    <script
-      src="https://kit.fontawesome/8e8ce04397.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome/8e8ce04397.js" crossorigin="anonymous"></script>
     <script>
-      tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            fontFamily: {
-              inter: ['Inter', 'sans-serif'],
-              poppins: ['Poppins', 'sans-serif'],
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        darkGreen: '#328704',
+                        lightGreen: '#98E8BC',
+                    },
+                    screens: {
+                        'sm': '400px'
+                    }
+                },
             },
-            colors: {
-              darkGreen: '#328704',
-              lightGreen: '#98E8BC',
-            },
-          },
-        },
-      };
+        };
 
-      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-      if (
-        localStorage.getItem('ascf-theme') === 'dark' ||
-        (!('ascf-theme' in localStorage) &&
-          window.matchMedia('(prefers-color-scheme: dark)').matches)
-      ) {
-        document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-      }
+        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+        if (
+            localStorage.getItem('ascf-theme') === 'dark' ||
+            (!('ascf-theme' in localStorage) &&
+                window.matchMedia('(prefers-color-scheme: dark)').matches)
+        ) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
     </script>
-  </head>
+</head>
 
-  <body class="text-gray-500 dark:text-gray-400 dark:bg-gray-900">
-    <button
-      id="toTopBtn"
-      class="hidden transition-all fixed bottom-6 right-6 z-50 border-none outline-none bg-gray-900 text-lightGreen dark:text-gray-900 dark:bg-lightGreen hover:color-lightGreen cursor-pointer rounded-full w-8 h-8 hover:opacity-90 dark:opacity-80 dark:hover:opacity-90"
-    >
-      <i class="fa fa-angle-up fa-2x"></i>
+<body class="text-gray-500 dark:text-gray-400 dark:bg-gray-900">
+    <button id="toTopBtn"
+        class="hidden transition-all fixed bottom-6 right-6 z-50 border-none outline-none bg-gray-900 text-lightGreen dark:text-gray-900 dark:bg-lightGreen hover:color-lightGreen cursor-pointer rounded-full w-8 h-8 lg:w-12 lg:h-12 hover:opacity-90 dark:opacity-80 dark:hover:opacity-90">
+        <i class="fa fa-angle-up fa-2x lg:fa-3x"></i>
     </button>
-    <button
-      id="toBottomBtn"
-      class="transition-all fixed bottom-6 right-6 z-50 border-none outline-none bg-gray-900 text-lightGreen dark:text-gray-900 dark:bg-lightGreen hover:color-lightGreen cursor-pointer rounded-full w-8 h-8 hover:opacity-90 dark:opacity-80 dark:hover:opacity-90"
-    >
-      <i class="fa fa-angle-down fa-2x"></i>
+    <button id="toBottomBtn"
+        class="transition-all fixed bottom-6 right-6 z-50 border-none outline-none bg-gray-900 text-lightGreen dark:text-gray-900 dark:bg-lightGreen hover:color-lightGreen cursor-pointer rounded-full w-8 h-8 lg:w-12 lg:h-12 hover:opacity-90 dark:opacity-80 dark:hover:opacity-90">
+        <i class="fa fa-angle-down fa-2x lg:fa-3x"></i>
     </button>
-    <section id="hero">
-      <header>
-        <img src="" alt="" id="logo" />
-        <nav>
-          <ul>
-            <li class="text-darkGreen"><a href="about.html">About</a></li>
-            <li class="text-red-500"><a>Register</a></li>
-            <li class="text-lightGreen"><a>Gallery</a></li>
-            <li><a>Activities</a></li>
-            <li><a>Contact</a></li>
-          </ul>
-        </nav>
-        <section>
-          <button
-            id="theme-toggle"
-            type="button"
-            title="Toggle theme"
-            class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
-          >
-            <svg
-              id="theme-toggle-dark-icon"
-              class="hidden w-5 h-5"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
-              ></path>
-            </svg>
-            <svg
-              id="theme-toggle-light-icon"
-              class="hidden w-5 h-5"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </button>
-        </section>
-      </header>
+    <main>
+        <section id="hero">
+            <header>
+                <img src="" alt="" id="logo" />
+                <nav>
+                    <ul>
+                        <li class="text-darkGreen"><a href="about.html">About</a></li>
+                        <li class="text-red-500"><a>Register</a></li>
+                        <li class="text-lightGreen"><a>Gallery</a></li>
+                        <li><a>Activities</a></li>
+                        <li><a>Contact</a></li>
+                    </ul>
+                </nav>
+                <section>
+                    <button id="theme-toggle" type="button" title="Toggle theme"
+                        class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+                        <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                                fill-rule="evenodd" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </section>
+            </header>
 
-      <section>
-        <h1>IEE NIGERIA CONFERENCE 2022</h1>
-        <p>DBI INSTITUTE, LAGOS | JUNE 9TH - 11TH, 2022</p>
-        <a href="">JOIN NOW</a>
-      </section>
-    </section>
-    <section id="about">
-      <section>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-          repellat autem hic in aliquam aperiam, nulla impedit maxime placeat
-          explicabo delectus ex soluta laudantium. Nisi aspernatur aliquid
-          perferendis vitae necessitatibus. Sit maxime cumque eveniet corporis
-          laboriosam! Tenetur debitis eius, dicta eaque nam dolor libero eveniet
-          harum culpa praesentium veniam quos inventore, nobis, dolores
-          architecto quae fugit! Rem beatae aperiam quaerat! Eum facilis ut
-          dolorem esse, dolores magni temporibus voluptas. Velit cupiditate
-          inventore laborum magnam. Soluta similique sit nihil nobis ipsam,
-          molestiae obcaecati magnam debitis sequi beatae, voluptate doloribus
-          ipsa dignissimos. Delectus vitae illo iusto ullam vel quae animi?
-          Expedita magnam nam eos repellendus molestias quam. Eos accusantium,
-          nobis inventore accusamus non rem sapiente? Maiores veniam
-          consequuntur asperiores, optio incidunt fugiat! Laboriosam corrupti
-          natus illum quisquam, nemo similique nulla quidem, doloremque
-          architecto cumque, tenetur accusantium quo temporibus iste debitis id
-          obcaecati voluptates consequatur vitae nostrum. Doloribus blanditiis
-          nobis voluptatem culpa odit.
-        </p>
-      </section>
-      <img src="" alt="" />
-    </section>
-    <section id="registration"
-        class="text-gray-900 bg-gradient-to-r from-lightGreen to-darkGreen mt-6 flex items-center flex-wrap justify-around py-8 px-4">
-        <section class="shrink text-center">
-            <h1 class="text-4xl font-extrabold uppercase tracking-widest">It is Happening Soon</h1>
-    
-            <p class="text-sm my-4 max-w-fit text-gray-900/60 font-semibold tracking-wide">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates sequi, natus optio esse, tenetur excepturi quidem ducimus ratione repellat, expedita saepe consequatur. Quae, repellat laboriosam sapiente velit dolore tempora iste!
-            </p>
-    
-            <a href=""
-                class="bg-transparent hover:bg-gray-900 text-gray-900 font-semibold hover:text-white py-2 px-4 border-2 border-solid border-gray-900 rounded hover:border-transparent transition-all ease-in-out delay-150"
-                style="">SIGN ME UP</a>
-        </section>
-        <section class="justify-around main-section grow flex flex-initial text-center mt-8 space-x-6 lg:max-w-[40rem]">
-            <section class="test flex-1">
-                <div class="countdown-div items-center justify-center rounded-md border border-lightGreen bg-lightGreen mb-4 max-w-[-22rem] shadow-lg shadow-black relative lg:after:right-[-3%] before:absolute before:bg-gray-900 before:w-[15px] before:-left-1 before:h-[8px] before:rotate-90 after:absolute after:bg-gray-900 after:w-[15px] after:-right-1 after:h-[8px] after:-rotate-90">
-                    <h2 id="days-left" class="font-extrabold text-gray-900 text-3xl lg:py-8 sm:py-[1.5rem]">00</h2>
-                    <div class="absolute top-1/2 z-10 h-px bg-gray-900 w-full"></div>
-                </div>
-                <p class="font-semibold text-sm text-gray-900/60">DAYS</p>
-            </section>
-            <section class="test flex-1">
-                <div
-                    class="countdown-div items-center justify-center rounded-md border border-lightGreen bg-lightGreen mb-4 max-w-[-22rem] shadow-lg shadow-black relative lg:after:right-[-3%] before:absolute before:bg-gray-900 before:w-[15px] before:-left-1 before:h-[8px] before:rotate-90 after:absolute after:bg-gray-900 after:w-[15px] after:-right-1 after:h-[8px] after:-rotate-90">
-                    <h2 id="hours-left" class="font-extrabold text-gray-900 text-3xl lg:py-8 sm:py-[1.5rem]">00</h2>
-                    <div class="absolute top-1/2 z-10 h-px bg-gray-900 w-full"></div>
-                </div>
-                <p class="font-semibold text-sm text-gray-900/60">HOURS</p>
-            </section>
-            <section class="test flex-1">
-                <div
-                    class="countdown-div items-center justify-center rounded-md border border-lightGreen bg-lightGreen mb-4 max-w-[-22rem] shadow-lg shadow-black relative lg:after:right-[-3%] before:absolute before:bg-gray-900 before:w-[15px] before:-left-1 before:h-[8px] before:rotate-90 after:absolute after:bg-gray-900 after:w-[15px] after:-right-1 after:h-[8px] after:-rotate-90">
-                    <h2 id="minutes-left" class="font-extrabold text-gray-900 text-3xl lg:py-8 sm:py-[1.5rem]">00</h2>
-                    <div class="absolute top-1/2 z-10 h-px bg-gray-900 w-full"></div>
-                </div>
-                <p class="font-semibold text-sm text-gray-900/60">MINUTES</p>
-            </section>
-            <section class="test flex-1">
-                <div
-                    class="countdown-div items-center justify-center rounded-md border border-lightGreen bg-lightGreen mb-4 max-w-[-22rem] shadow-lg shadow-black relative lg:after:right-[-3%] before:absolute before:bg-gray-900 before:w-[15px] before:-left-1 before:h-[8px] before:rotate-90 after:absolute after:bg-gray-900 after:w-[15px] after:-right-1 after:h-[8px] after:-rotate-90">
-                    <h2 id="seconds-left" class="font-extrabold text-gray-900 text-3xl lg:py-8 sm:py-[1.5rem]">00</h2>
-                    <div class="absolute top-1/2 z-10 h-px bg-gray-900 w-full"></div>
-                </div>
-                <p class="font-semibold text-sm text-gray-900/60">SECONDS</p>
+            <section>
+                <h1>IEE NIGERIA CONFERENCE 2022</h1>
+                <p>DBI INSTITUTE, LAGOS | JUNE 9TH - 11TH, 2022</p>
+                <a href="">JOIN NOW</a>
             </section>
         </section>
-      </section>
-    </section>
-    <section
-      id="gallery"
-      class="flex justify-center bg-gradient-to-r from-lightGreen via-darkGreen to-darkGreen text-gray-900"
-    >
-      <section class="flex flex-1 flex-col p-2" style="flex-grow: 1">
-        <section class="flex-1"></section>
-        <section class="flex-1 flex justify-end items-center space-x-4">
-          <i class="fa fa-camera text-5xl"></i>
-          <section class="">
-            <h3 class="font-extrabold text-2xl">Our</h3>
-            <h2 class="font-extrabold text-4xl">Gallery</h2>
-          </section>
-        </section>
-        <section class="flex-1">
-          <p class="text-sm">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum
-            tenetur aliquid iusto rem velit nostrum, tempora, minima quia,
-            voluptatem nobis fuga modi! Voluptas vel corrupti accusamus, placeat
-            veniam maiores ad.
-          </p>
-        </section>
-      </section>
-      <div
-        id="default-carousel"
-        class="relative flex-1"
-        data-carousel="slide"
-        style="flex-grow: 2"
-      >
-        <!-- Carousel wrapper -->
-        <div
-          class="overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96"
-        >
-          <!-- Item 1 -->
-          <div
-            class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20"
-            data-carousel-item=""
-          >
-            <span
-              class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800"
-              >First Slide</span
-            >
-            <img
-              src="../../assets/logo.png"
-              class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2"
-              alt="..."
-            />
-          </div>
-          <!-- Item 2 -->
-          <div
-            class="duration-700 ease-in-out absolute inset-0 transition-all transform z-10 translate-x-full"
-            data-carousel-item=""
-          >
-            <img
-              src="../../assets/about-image.jpg"
-              class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2"
-              alt="..."
-            />
-          </div>
-          <!-- Item 3 -->
-          <div
-            class="duration-700 ease-in-out absolute inset-0 transition-all transform -translate-x-full z-10"
-            data-carousel-item=""
-          >
-            <img
-              src="../../assets/hero-background.png"
-              class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2"
-              alt="..."
-            />
-          </div>
-        </div>
-        <!-- Slider indicators -->
-        <div
-          class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2"
-        >
-          <button
-            type="button"
-            class="w-3 h-3 rounded-full !bg-gray-800/50 !hover:bg-gray-800 bg-white dark:bg-gray-800"
-            aria-current="true"
-            aria-label="Slide 1"
-            data-carousel-slide-to="0"
-          ></button>
-          <button
-            type="button"
-            class="w-3 h-3 rounded-full !bg-gray-800/50 !hover:bg-gray-800 bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800"
-            aria-current="false"
-            aria-label="Slide 2"
-            data-carousel-slide-to="1"
-          ></button>
-          <button
-            type="button"
-            class="w-3 h-3 rounded-full !bg-gray-800/50 !hover:bg-gray-800 bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800"
-            aria-current="false"
-            aria-label="Slide 3"
-            data-carousel-slide-to="2"
-          ></button>
-        </div>
-        <!-- Slider controls -->
-        <button
-          type="button"
-          class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
-          data-carousel-prev=""
-        >
-          <span
-            class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-gray-800/30 group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-gray-800/70 group-focus:outline-none"
-          >
-            <svg
-              class="w-5 h-5 sm:w-6 sm:h-6 text-gray-800"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M15 19l-7-7 7-7"
-              ></path>
-            </svg>
-            <span class="hidden">Previous</span>
-          </span>
-        </button>
-        <button
-          type="button"
-          class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
-          data-carousel-next=""
-        >
-          <span
-            class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-gray-800/30 group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-gray-800/70 group-focus:outline-none"
-          >
-            <svg
-              class="w-5 h-5 sm:w-6 sm:h-6 text-gray-800"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 5l7 7-7 7"
-              ></path>
-            </svg>
-            <span class="hidden">Next</span>
-          </span>
-        </button>
-      </div>
-    </section>
-    <section id="conference-activities" class="md:flex">
-      <section
-        class="p-10 pt-3 md:p-16 md:pt-6 bg-gradient-to-r from-lightGreen to-darkGreen text-gray-800 md:-mr-16"
-      >
-        <ul>
-          <li class="p-3">
-            <section class="flex items-center m-5 ml-0 font-extrabold">
-              <h3 class="mr-2">Technical Paper Contest</h3>
-              <i class="fa-solid fa-compass-drafting text-2xl"></i>
-            </section>
-
-            <p class="text-sm font-light">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Molestias, ipsum facilis quam natus alias voluptate porro ut
-              ullam, maxime et est facere dolore excepturi quos rem, eaque earum
-              veniam quod!
-            </p>
-          </li>
-          <li class="mt-0 p-3">
-            <section class="flex items-center m-5 ml-0 font-extrabold">
-              <h3 class="mr-2">Engineering Exhibition</h3>
-              <i class="fa-solid fa-jet-fighter text-2xl"></i>
-            </section>
-
-            <p class="text-sm font-light">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Molestias, ipsum facilis quam natus alias voluptate porro ut
-              ullam, maxime et est facere dolore excepturi quos rem, eaque earum
-              veniam quod!
-            </p>
-          </li>
-          <li class="mt-0 p-3">
-            <section class="flex items-center m-5 ml-0 font-extrabold">
-              <h3 class="mr-2">Inter-Student Branch Quiz and Competition</h3>
-              <i class="fa-solid fa-book-open-reader text-2xl"></i>
-            </section>
-
-            <p class="text-sm font-light">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Molestias, ipsum facilis quam natus alias voluptate porro ut
-              ullam, maxime et est facere dolore excepturi quos rem, eaque earum
-              veniam quod!
-            </p>
-          </li>
-          <li class="mt-0 p-3">
-            <section class="flex items-center m-5 ml-0 font-extrabold">
-              <h3 class="mr-2">Sporting Competitions</h3>
-              <i class="fa-solid fa-medal text-2xl"></i>
-            </section>
-
-            <p class="text-sm font-light">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Molestias, ipsum facilis quam natus alias voluptate porro ut
-              ullam, maxime et est facere dolore excepturi quos rem, eaque earum
-              veniam quod!
-            </p>
-          </li>
-        </ul>
-      </section>
-      <section
-        class="hidden md:block md:flex-auto md:w-1/5 md:p-7 md:text-center md:z-10 md:self-center md:text-5xl md:bg-gray-800 dark:text-darkGreen dark:bg-white md:text-white md:rounded-full"
-      >
-        <i class="fa-solid fa-gears"></i>
-      </section>
-
-      <section
-        class="flex-auto p-10 pt-3 md:p-20 md:pt-6 bg-white text-gray-800 dark:text-white dark:bg-gray-800 text-white md:-ml-16"
-      >
-        <ul>
-          <li class="p-3">
-            <section class="flex items-center m-5 ml-0 font-extrabold">
-              <h3 class="mr-2">Industrial Technical Visit</h3>
-              <i class="fa-solid fa-industry text-2xl"></i>
-            </section>
-
-            <p class="text-sm font-light">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Molestias, ipsum facilis quam natus alias voluptate porro ut
-              ullam, maxime et est facere dolore excepturi quos rem, eaque earum
-              veniam quod!
-            </p>
-          </li>
-          <li class="mt-0 p-3">
-            <section class="flex items-center m-5 ml-0 font-extrabold">
-              <h3 class="mr-2">Company and Organization Fair</h3>
-              <i class="fa-solid fa-building text-2xl"></i>
-            </section>
-
-            <p class="text-sm font-light">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Molestias, ipsum facilis quam natus alias voluptate porro ut
-              ullam, maxime et est facere dolore excepturi quos rem, eaque earum
-              veniam quod!
-            </p>
-          </li>
-          <li class="mt-0 p-3">
-            <section class="flex items-center m-5 ml-0 font-extrabold">
-              <h3 class="mr-2">Panel and Workshop Contest</h3>
-              <i class="fa-regular fa-podium text-2xl"></i>
-            </section>
-
-            <p class="text-sm font-light">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Molestias, ipsum facilis quam natus alias voluptate porro ut
-              ullam, maxime et est facere dolore excepturi quos rem, eaque earum
-              veniam quod!
-            </p>
-          </li>
-          <li class="mt-0 p-3">
-            <section class="flex items-center m-5 ml-0 font-extrabold">
-              <h3 class="mr-2">Technical Challenge - Robotic Contest</h3>
-              <i class="fa-solid fa-robot text-2xl"></i>
-            </section>
-
-            <p class="text-sm font-light">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Molestias, ipsum facilis quam natus alias voluptate porro ut
-              ullam, maxime et est facere dolore excepturi quos rem, eaque earum
-              veniam quod!
-            </p>
-          </li>
-        </ul>
-      </section>
-    </section>
-    <section
-      id="contact"
-      class="px-36 py-12 bg-white dark:bg-slate-900 text-gray-800 dark:text-gray-200 w-screen"
-    >
-      <div
-        class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-4 xl:grid-cols-4 gap-2"
-      >
-        <section class="col-span-2 font-semibold px-5">
-          <h3 class="font-bold text-xs mb-16">CONTACT US</h3>
-
-          <form>
-            <div class="relative z-0 mb-6 w-full group">
-              <input
-                type="name"
-                name="floating_name"
-                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                placeholder=" "
-                required=""
-              />
-              <label
-                for="floating_name"
-                class="absolute text-xs text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-                >Name</label
-              >
+        <section id="about" class="flex justify-center items-center px-4">
+            <div class="flex justify-center flex-wrap lg:max-w-4xl md:max-w-3xl sm:px-4 lg:px-0 md:space-x-12">
+                <section class="flex-1 py-6">
+                    <div class="sm:text-center sm:flex sm:justify-center md:block md:text-left tracking-wide border-b-2 border-solid border-lightGreen">
+                        <h2 class="md:font-extrabold text-xl sm:text-3xl">
+                            About
+                        </h2>
+                        <h2 class="text-3xl sm:before:content-['\00a0'] md:before:content-['']">the conference</h2>
+                    </div>
+            
+                    <div class="space-y-2 my-4">
+                        <p class="text-sm tracking-wide">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis,
+                            assumenda molestiae non eaque adipisci debitis repudiandae error
+                            nesciunt architecto quos quaerat sit.
+                        </p>
+                        <p class="text-sm tracking-wide">
+            
+                            Laboriosam ullam iusto beatae aperiam natus consequatur quos, eius,
+                            similique quod corrupti error sunt provident voluptatem tempore!
+                            Mollitia autem iure veniam! Saepe iusto veniam sed necessitatibus
+                            est voluptatem porro similique facere!
+                        </p>
+                    </div>
+            
+                    <div class="sm:text-center md:text-left"><button class="transition-all ease-in-out bg-lightGreen/80 text-gray-900 hover:bg-lightGreen font-bold py-2 rounded-full px-4 md:w-full lg:w-auto sm:w-1/2 sm:text-lg focus:ring-4 focus:outline-none focus:ring-lightGreen/80">Read more</button></div>
+            
+                </section>
+                <img src="../../assets/conference.jpg" alt="About STECON 2022" class="flex-1 md:max-w-[50%] rounded-lg shadow-lg shadow-black">
             </div>
-            <div class="relative z-0 mb-6 w-full group">
-              <input
-                type="email"
-                name="floating_email"
-                id="floating_email"
-                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                placeholder=" "
-                required="*"
-              />
-              <label
-                for="floating_email"
-                class="absolute text-xs text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-                >Email</label
-              >
-            </div>
-            <div class="relative z-0 mb-6 w-full group">
-              <input
-                type="subject"
-                name="floating_subject"
-                id="floating_subject"
-                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                placeholder=" "
-                required="*"
-              />
-              <label
-                for="floating_subject"
-                class="absolute text-xs text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-                >Subject</label
-              >
-            </div>
-            <div class="relative z-0 mb-6 w-full group">
-              <textarea
-                name="message"
-                id="floating-message"
-                type="Message"
-                cols="30"
-                rows="3"
-                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                placeholder=" "
-              ></textarea>
-              
-              <label
-                for="floating_message"
-                class="absolute text-xs text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-                >Message</label
-              >
-            </div>
-
-            <button
-              type="submit"
-              class="text-white dark:text-gray-800 bg-green-600 dark:bg-green-200 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
-            >
-              Submit
-            </button>
-          </form>
         </section>
-        <section class="sm:w-16 md:w-28 lg:w-36 xl:w-48">
-          <h3 class="font-bold text-xs mb-16 ml-10">QUICK MENU</h3>
+        <section id="registration"
+            class="text-gray-900 bg-gradient-to-r from-lightGreen to-darkGreen mt-6 flex items-center flex-wrap justify-around py-8 px-4">
+            <section class="shrink text-center">
+                <h1 class="text-4xl font-extrabold uppercase tracking-widest">It is Happening Soon</h1>
 
-          <ul class="flex flex-col ml-10 gap-3 text-xs">
-            <li><a href="#about" class="scroll-smooth">About</a></li>
-            <li><a href="#registration" class="scroll-smooth">Register</a></li>
-            <li><a href="#gallery" class="scroll-smooth">Gallery</a></li>
-            <li><a href="#conference-activities" class="scroll-smooth">Activities</a></li>
-            <li><a href="#contact" class="scroll-smooth">Contact</a></li>
-          </ul>
-        </section>
-        <section>
-          <h3 class="font-bold text-xs mb-16">SOCIALS</h3>
+                <p class="text-sm my-4 max-w-fit text-gray-900/60 font-semibold tracking-wide">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates sequi, natus optio esse, tenetur
+                    excepturi quidem ducimus ratione repellat, expedita saepe consequatur. Quae, repellat laboriosam
+                    sapiente velit dolore tempora iste!
+                </p>
 
-          <ul class="flex flex-col gap-3 text-xs">
-            <li><a href="http://fb.me/stecon2022">Facebook</a></li>
-            <li><a href="https://twitter.com/stecon2022">Twitter</a></li>
-            <li><a href="http://instagram.com/stecon2022">Instagram</a></li>
-          </ul>
+                <a href=""
+                    class="bg-transparent hover:bg-gray-900 text-gray-900 font-semibold hover:text-white py-2 px-4 border-2 border-solid border-gray-900 rounded hover:border-transparent transition-all ease-in-out delay-50 focus:ring-4 focus:outline-none focus:ring-gray-900/90"
+                    style="">SIGN ME UP</a>
+            </section>
+            <section class="justify-around main-section grow flex flex-initial text-center mt-8 space-x-6 lg:max-w-[40rem]">
+                <section class="test flex-1">
+                    <div
+                        class="countdown-div items-center justify-center rounded-md border border-lightGreen bg-lightGreen mb-4 max-w-[-22rem] shadow-lg shadow-black relative lg:after:right-[-3%] before:absolute before:bg-gray-900 before:w-[15px] before:-left-1 before:h-[8px] before:rotate-90 after:absolute after:bg-gray-900 after:w-[15px] after:-right-1 after:h-[8px] after:-rotate-90">
+                        <h2 id="days-left" class="font-extrabold text-gray-900 text-3xl lg:py-8 sm:py-[1.5rem]">00</h2>
+                        <div class="absolute top-1/2 z-10 h-px bg-gray-900 w-full"></div>
+                    </div>
+                    <p class="font-semibold text-sm text-gray-900/60">DAYS</p>
+                </section>
+                <section class="test flex-1">
+                    <div
+                        class="countdown-div items-center justify-center rounded-md border border-lightGreen bg-lightGreen mb-4 max-w-[-22rem] shadow-lg shadow-black relative lg:after:right-[-3%] before:absolute before:bg-gray-900 before:w-[15px] before:-left-1 before:h-[8px] before:rotate-90 after:absolute after:bg-gray-900 after:w-[15px] after:-right-1 after:h-[8px] after:-rotate-90">
+                        <h2 id="hours-left" class="font-extrabold text-gray-900 text-3xl lg:py-8 sm:py-[1.5rem]">00</h2>
+                        <div class="absolute top-1/2 z-10 h-px bg-gray-900 w-full"></div>
+                    </div>
+                    <p class="font-semibold text-sm text-gray-900/60">HOURS</p>
+                </section>
+                <section class="test flex-1">
+                    <div
+                        class="countdown-div items-center justify-center rounded-md border border-lightGreen bg-lightGreen mb-4 max-w-[-22rem] shadow-lg shadow-black relative lg:after:right-[-3%] before:absolute before:bg-gray-900 before:w-[15px] before:-left-1 before:h-[8px] before:rotate-90 after:absolute after:bg-gray-900 after:w-[15px] after:-right-1 after:h-[8px] after:-rotate-90">
+                        <h2 id="minutes-left" class="font-extrabold text-gray-900 text-3xl lg:py-8 sm:py-[1.5rem]">00</h2>
+                        <div class="absolute top-1/2 z-10 h-px bg-gray-900 w-full"></div>
+                    </div>
+                    <p class="font-semibold text-sm text-gray-900/60">MINUTES</p>
+                </section>
+                <section class="test flex-1">
+                    <div
+                        class="countdown-div items-center justify-center rounded-md border border-lightGreen bg-lightGreen mb-4 max-w-[-22rem] shadow-lg shadow-black relative lg:after:right-[-3%] before:absolute before:bg-gray-900 before:w-[15px] before:-left-1 before:h-[8px] before:rotate-90 after:absolute after:bg-gray-900 after:w-[15px] after:-right-1 after:h-[8px] after:-rotate-90">
+                        <h2 id="seconds-left" class="font-extrabold text-gray-900 text-3xl lg:py-8 sm:py-[1.5rem]">00</h2>
+                        <div class="absolute top-1/2 z-10 h-px bg-gray-900 w-full"></div>
+                    </div>
+                    <p class="font-semibold text-sm text-gray-900/60">SECONDS</p>
+                </section>
+            </section>
         </section>
-      </div>
-    </section>
+        <section id="gallery"
+            class="md:flex justify-center items-center py-6 px-4 text-gray-900 dark:text-gray-200">
+            <div class="md:flex justify-center flex-wrap lg:max-w-md md:max-w-3xl sm:px-4 lg:px-0 md:space-x-12">
+                <section class="md:max-w-[75%] py-6 sm:flex sm:flex-col items-center">
+                    <!-- <section class="flex-1"></section> -->
+                    <section class="flex items-center space-x-4">
+                        <i class="fa fa-camera text-5xl"></i>
+                        <section class="">
+                            <h3 class="font-extrabold text-2xl">Our</h3>
+                            <h2 class="font-extrabold text-4xl">Gallery</h2>
+                        </section>
+                    </section>
+                    <section class="mt-10">
+                        <p class="text-sm">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum
+                            tenetur aliquid iusto rem velit nostrum, tempora, minima quia,
+                            voluptatem nobis fuga modi! Voluptas vel corrupti accusamus, placeat
+                            veniam maiores ad.
+                        </p>
+                    </section>
+                </section>
+            </div>
+            <div id="default-carousel" class="sm:grow sm:w-full md:min-w-[40%] relative rounded-lg shadow-lg shadow-black"
+                data-carousel="slide">
+                <!-- Carousel wrapper -->
+                <div class="overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96">
+                    <!-- Item 1 -->
+                    <div class="duration-700 ease-in-out absolute inset-0 transition-all transform -translate-x-full z-10"
+                        data-carousel-item="">
+                        <span
+                            class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">First
+                            Slide</span>
+                        <img src="../../assets/logo.png"
+                            class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20"
+                        data-carousel-item="">
+                        <img src="../../assets/about-image.jpg"
+                            class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="..." style="
+        ">
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="duration-700 ease-in-out absolute inset-0 transition-all transform z-10 translate-x-full"
+                        data-carousel-item="">
+                        <img src="../../assets/hero-background.png"
+                            class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+                    </div>
+                </div>
+                <!-- Slider indicators -->
+                <div class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2">
+                    <button type="button"
+                        class="w-3 h-3 rounded-full !bg-gray-800/50 !hover:bg-gray-800 bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800"
+                        aria-current="false" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                    <button type="button"
+                        class="w-3 h-3 rounded-full !bg-gray-800/50 !hover:bg-gray-800 bg-white dark:bg-gray-800"
+                        aria-current="true" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                    <button type="button"
+                        class="w-3 h-3 rounded-full !bg-gray-800/50 !hover:bg-gray-800 bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800"
+                        aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                </div>
+                <!-- Slider controls -->
+                <button type="button"
+                    class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
+                    data-carousel-prev="">
+                    <span
+                        class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-gray-800/30 group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                            </path>
+                        </svg>
+                        <span class="hidden">Previous</span>
+                    </span>
+                </button>
+                <button type="button"
+                    class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
+                    data-carousel-next="">
+                    <span
+                        class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-gray-800/30 group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                        <span class="hidden">Next</span>
+                    </span>
+                </button>
+            </div>
+        </section>
+        <section id="conference-activities" class="">
+        <h2 class="pt-4 text-3xl font-extrabold uppercase tracking-widest text-gray-800 text-center bg-gradient-to-r from-lightGreen to-darkGreen border-b-2 border-solid border-white dark:border-gray-900">Conference Activites</h2>
+        <section class="md:flex">    
+            <section class="sm:p-4 lg:p-10 pt-3 md:p-16 md:pt-6 bg-gradient-to-r from-lightGreen to-darkGreen text-gray-800 md:-mr-16">
+                    <ul>
+                        <li class="p-3 border-b-2 border-solid">
+                            <section class="flex items-center m-5 ml-0 font-extrabold">
+                                <h3 class="mr-2 text-xl">Technical Paper Contest</h3>
+                                <i class="fa-solid fa-compass-drafting text-2xl"></i>
+                            </section>
+
+                            <p class="text-sm font-light">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Molestias, ipsum facilis quam natus alias voluptate porro ut
+                                ullam, maxime et est facere dolore excepturi quos rem, eaque earum
+                                veniam quod!
+                            </p>
+                        </li>
+                        <li class="mt-0 p-3 border-b-2 border-solid">
+                            <section class="flex items-center m-5 ml-0 font-extrabold">
+                                <h3 class="mr-2 text-xl">Engineering Exhibition</h3>
+                                <i class="fa-solid fa-jet-fighter text-2xl"></i>
+                            </section>
+
+                            <p class="text-sm font-light">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Molestias, ipsum facilis quam natus alias voluptate porro ut
+                                ullam, maxime et est facere dolore excepturi quos rem, eaque earum
+                                veniam quod!
+                            </p>
+                        </li>
+                        <li class="mt-0 p-3 border-b-2 border-solid">
+                            <section class="flex items-center m-5 ml-0 font-extrabold">
+                                <h3 class="mr-2 text-xl">Inter-Student Branch Quiz and Competition</h3>
+                                <i class="fa-solid fa-book-open-reader text-2xl"></i>
+                            </section>
+
+                            <p class="text-sm font-light">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Molestias, ipsum facilis quam natus alias voluptate porro ut
+                                ullam, maxime et est facere dolore excepturi quos rem, eaque earum
+                                veniam quod!
+                            </p>
+                        </li>
+                        <li class="mt-0 p-3 border-b-2 border-solid">
+                            <section class="flex items-center m-5 ml-0 font-extrabold">
+                                <h3 class="mr-2 text-xl">Sporting Competitions</h3>
+                                <i class="fa-solid fa-medal text-2xl"></i>
+                            </section>
+
+                            <p class="text-sm font-light">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Molestias, ipsum facilis quam natus alias voluptate porro ut
+                                ullam, maxime et est facere dolore excepturi quos rem, eaque earum
+                                veniam quod!
+                            </p>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="hidden md:block md:flex-auto md:w-24 md:h-24 md:p-14 md:text-center md:z-10 md:self-center md:text-5xl md:bg-gray-800 dark:text-darkGreen dark:bg-white md:text-white md:relative md:rounded-full">
+                    <i class="fa-solid fa-gears absolute fa-xl left-0 top-1/2 right-0"></i>
+                </section>
+
+                <section class="sm:p-4 flex-auto lg:p-10 pt-3 md:p-20 md:pt-6 bg-white text-gray-800 dark:text-gray-300 dark:bg-gray-800 text-white md:-ml-16">
+                    <ul>
+                        <li class="p-3 border-b-2 border-solid">
+                            <section class="flex items-center m-5 ml-0 font-extrabold">
+                                <h3 class="mr-2 text-xl">Industrial Technical Visit</h3>
+                                <i class="fa-solid fa-industry text-2xl"></i>
+                            </section>
+
+                            <p class="text-sm font-light">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Molestias, ipsum facilis quam natus alias voluptate porro ut
+                                ullam, maxime et est facere dolore excepturi quos rem, eaque earum
+                                veniam quod!
+                            </p>
+                        </li>
+                        <li class="mt-0 p-3 border-b-2 border-solid">
+                            <section class="flex items-center m-5 ml-0 font-extrabold">
+                                <h3 class="mr-2 text-xl">Company and Organization Fair</h3>
+                                <i class="fa-solid fa-building text-2xl"></i>
+                            </section>
+
+                            <p class="text-sm font-light">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Molestias, ipsum facilis quam natus alias voluptate porro ut
+                                ullam, maxime et est facere dolore excepturi quos rem, eaque earum
+                                veniam quod!
+                            </p>
+                        </li>
+                        <li class="mt-0 p-3 border-b-2 border-solid">
+                            <section class="flex items-center m-5 ml-0 font-extrabold">
+                                <h3 class="mr-2 text-xl">Panel and Workshop Contest</h3>
+                                <i class="fa-regular fa-podium text-2xl"></i>
+                            </section>
+
+                            <p class="text-sm font-light">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Molestias, ipsum facilis quam natus alias voluptate porro ut
+                                ullam, maxime et est facere dolore excepturi quos rem, eaque earum
+                                veniam quod!
+                            </p>
+                        </li>
+                        <li class="mt-0 p-3 border-b-2 border-solid">
+                            <section class="flex items-center m-5 ml-0 font-extrabold">
+                                <h3 class="mr-2 text-xl">Technical Challenge - Robotic Contest</h3>
+                                <i class="fa-solid fa-robot text-2xl"></i>
+                            </section>
+
+                            <p class="text-sm font-light">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Molestias, ipsum facilis quam natus alias voluptate porro ut
+                                ullam, maxime et est facere dolore excepturi quos rem, eaque earum
+                                veniam quod!
+                            </p>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+        </section>
+        <section id="contact" class="md:flex justify-center items-center py-8 px-4 dark:bg-slate-900 text-gray-800 dark:text-gray-200 flex-wrap">
+            <div class="md:flex justify-around items-center w-full flex-wrap sm:space-y-10 sm:text-center">
+                <section class="md:flex-1 md:max-w-[33%] sm:text-left">
+                    <h3 class="font-bold text-xl mb-4 sm:text-center">CONTACT US</h3>
+        
+                    <form>
+                        <div class="relative z-0 mb-6 w-full group">
+                            <input type="name" name="floating_name" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-lightGreen focus:outline-none focus:ring-0 focus:border-lightGreen/90 peer" placeholder=" " required="">
+                            <label for="floating_name" class="absolute text-xs text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-lightGreen/90 peer-focus:dark:text-lighGreen peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Name</label>
+                        </div>
+                        <div class="relative z-0 mb-6 w-full group">
+                            <input type="email" name="floating_email" id="floating_email" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-lightGreen focus:outline-none focus:ring-0 focus:border-lightGreen/90 peer" placeholder=" " required="*">
+                            <label for="floating_email" class="absolute text-xs text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-lightGreen/90 peer-focus:dark:text-lighGreen peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email</label>
+                        </div>
+                        <div class="relative z-0 mb-6 w-full group">
+                            <input type="subject" name="floating_subject" id="floating_subject" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-lightGreen focus:outline-none focus:ring-0 focus:border-lightGreen/90 peer" placeholder=" " required="*">
+                            <label for="floating_subject" class="absolute text-xs text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-lightGreen/90 peer-focus:dark:text-lighGreen peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Subject</label>
+                        </div>
+                        <div class="relative z-0 mb-6 w-full group">
+                            <textarea name="message" id="floating-message" type="Message" cols="30" rows="3" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-lightGreen focus:outline-none focus:ring-0 focus:border-lightGreen/90 peer" placeholder=" "></textarea>
+        
+                            <label for="floating_message" class="absolute text-xs text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-lightGreen/90 peer-focus:dark:text-lighGreen peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Message</label>
+                        </div>
+        
+                        <div class="text-center"><button type="submit" class="transition-all ease-in-out font-semibold dark:text-gray-800 bg-lightGreen/90 focus:ring-4 focus:outline-none rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center hover:bg-lightGreen focus:ring-lightGreen/80">
+                            Submit
+    </button></div>
+                    </form>
+                </section>
+                <section class="">
+                    <h3 class="font-bold text-xl mb-4">QUICK MENU</h3>
+        
+                    <ul class="flex flex-col gap-3 text-xs">
+                        <li><a href="#about" class="hover:underline">About</a></li>
+                        <li><a href="#registration" class="hover:underline">Register</a></li>
+                        <li><a href="#gallery" class="hover:underline">Gallery</a></li>
+                        <li><a href="#conference-activities" class="hover:underline">Activities</a></li>
+                        <li><a href="#contact" class="hover:underline">Contact</a></li>
+                    </ul>
+                </section>
+                <section class="">
+                    <h3 class="font-bold text-xl mb-4">SOCIALS</h3>
+        
+                    <ul class="flex flex-col gap-3 text-xs">
+                        <li><a href="http://fb.me/stecon2022">Facebook</a></li>
+                        <li><a href="https://twitter.com/stecon2022">Twitter</a></li>
+                        <li><a href="http://instagram.com/stecon2022">Instagram</a></li>
+                    </ul>
+                </section>
+            </div>
+        </section>
+    </main>
 
     <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
     <script src="../js/index.js"></script>
-  </body>
+</body>
+
 </html>
