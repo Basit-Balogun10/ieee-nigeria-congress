@@ -12,3 +12,53 @@ a {
     top: calc(50% - 4px);
     border-radius: 15px 15px 0px 0;
 }
+@media(min-width:768px){
+    .maximum-width{
+           max-width: 900px;
+   margin-left: auto;
+   margin-right: auto;
+   }
+}
+@media(min-width:768px){
+    .button-text{
+           display: none;
+   }
+}
+.jumbotron {
+    height: 55vh;
+    margin-bottom: 50px;
+}
+
+.jumbotron-inner {
+   height: 100%;
+   padding-top: 65px;
+  align-items: center;
+  text-align: center;
+}
+@media (max-width: 500px) {  
+  .jumbotron {
+       height: 45vh;
+  }
+}
+.section-1{
+    margin-left: auto;
+   margin-right: auto;
+}
+.section-1 h1, p{
+   margin-bottom: 10px;
+}
+.section-1 h1{
+    font-family: cursive;
+    font-size: 25px;
+    font-weight: 700;
+}
+.section-1 p{
+    font-size: 15px;
+}
+.section-1 button{
+    margin-top: 15px;
+    font-weight: bold;
+}
+.backg__img{
+  background-color: rgb(159, 207, 209);
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IEEE Nigeria Conference 2022</title>
+    <script src="https://kit.fontawesome.com/e26e4a68b3.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&family=Inter&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.1/dist/flowbite.min.css" />
+    <link rel="stylesheet" href="src/css/reset.css" />
+    <link rel="stylesheet" href="src/css/globals.css" />
+    <script src="https://kit.fontawesome/8e8ce04397.js" crossorigin="anonymous"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        darkGreen: '#328704',
+                        lightGreen: '#98E8BC',
+                    },
+                    screens: {
+                        'sm': '400px'
+                    }
+                },
+            },
+        };
+
+        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+        if (
+            localStorage.getItem('ascf-theme') === 'dark' ||
+            (!('ascf-theme' in localStorage) &&
+                window.matchMedia('(prefers-color-scheme: dark)').matches)
+        ) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+</head>
+
+<body class="text-gray-500 dark:text-gray-400 dark:bg-gray-900">
+    <button id="toTopBtn"
+        class="hidden transition-all fixed bottom-6 right-6 z-50 border-none outline-none bg-gray-900 text-lightGreen dark:text-gray-900 dark:bg-lightGreen hover:color-lightGreen cursor-pointer rounded-full w-8 h-8 lg:w-12 lg:h-12 hover:opacity-90 dark:opacity-80 dark:hover:opacity-90">
+        <i class="fa fa-angle-up fa-2x lg:fa-3x"></i>
+    </button>
+    <button id="toBottomBtn"
+        class="transition-all fixed bottom-6 right-6 z-50 border-none outline-none bg-gray-900 text-lightGreen dark:text-gray-900 dark:bg-lightGreen hover:color-lightGreen cursor-pointer rounded-full w-8 h-8 lg:w-12 lg:h-12 hover:opacity-90 dark:opacity-80 dark:hover:opacity-90">
+        <i class="fa fa-angle-down fa-2x lg:fa-3x"></i>
+    </button>
+    <main>
+
+        <!--Hero Section-->
+        <section id="hero">
+            <header>
+                <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800 backg__img">
+                    <div class="container-fluid flex flex-wrap justify-between items-center mx-auto maximum-width">
+                        <a href="" class="flex items-center">
+                            <!--IEEE Logo Image-->
+                            <img src="assets\logo.png" class="mr-3 h-6 sm:h-9" alt="IEEE Logo">
+                            <!-- <span
+                            class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">IEEE</span> -->
+                        </a>
+                        <button data-collapse-toggle="mobile-menu" type="button"
+                            class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                            aria-controls="mobile-menu" aria-expanded="false">
+                            <span class="sr-only">Open main menu</span>
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                        <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
+                            <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+                                <li>
+                                    <a href="#" class="block py-2 pr-4 pl-3 dark:text-white"
+                                        aria-current="page">About</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="block py-2 pr-4 pl-3 dark:text-white">Register</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="block py-2 pr-4 pl-3 dark:text-white">Gallery</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="block py-2 pr-4 pl-3 dark:text-white">Activities</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="block py-2 pr-4 pl-3 dark:text-white">Contact</a>
+                                </li>
+                                <li class="flex">
+
+                                    <!-- <span class=" block py-2 pl-3 self-center dark:text-white ">Switch Theme</span> -->
+                                    <button id="theme-toggle" type="button"
+                                        class="py-2 pr-4  pl-3 text-gray-500 dark:text-white  hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 px-5 text-center inline-flex items-center">
+                                        <span class="pr-4 button-text">Switch Theme</span>
+                                        <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor"
+                                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z">
+                                            </path>
+                                        </svg>
+                                        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor"
+                                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                                                fill-rule="evenodd" clip-rule="evenodd">
+                                            </path>
+                                        </svg>
+
+                                    </button>
+
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+            </header>
+
+            <!-- section 1 -->
+            <div class="jumbotron backg__img">
+                <div class="jumbotron-inner maximum-width">
+                    <div class="section-1">
+                        <h1>IEEE Nigeria <br> Conference 2022</h1>
+                        <p>DBI Institue, Lagos | JUNE 9TH - 11TH, 2022</p>
+                        <button type="button" href=""
+                            class=" join-now-btn text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-full text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">JOIN
+                            NOW
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- section 1 -->
+
+
+        </section>
+        <!--Hero Section-->
+
+
+       
+    </main>
+
+    <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
+    <script src="src/js/index.js"></script>
+</body>
+
+</html>
