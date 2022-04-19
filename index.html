@@ -59,41 +59,86 @@
         <i class="fa fa-angle-down fa-2x lg:fa-3x"></i>
     </button>
     <main>
+        <!--Hero Section Begins-->
         <section id="hero">
             <header>
-                <img src="" alt="" id="logo" />
-                <nav>
-                    <ul>
-                        <li class="text-darkGreen"><a href="about.html">About</a></li>
-                        <li class="text-red-500"><a>Register</a></li>
-                        <li class="text-lightGreen"><a>Gallery</a></li>
-                        <li><a>Activities</a></li>
-                        <li><a>Contact</a></li>
-                    </ul>
+                <nav class="text-gray-900 dark:text-gray-200 md:dark:text-gray-800 md:text-gray-800 bg-white dark:bg-gray-800 dark:md:bg-transparent md:bg-transparent border-gray-200 px-2 sm:px-4 py-2.5 rounded backg__img">
+                    <div class="container-fluid flex flex-wrap justify-between items-center mx-auto maximum-width">
+                        <a href="" class="flex items-center">
+                            <!--IEEE Logo Image-->
+                            <img src="assets/logo.png" class="mr-3 h-6 sm:h-9" alt="IEEE Logo">
+                            <!-- <span
+                            class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">IEEE</span> -->
+                        </a>
+                        <button data-collapse-toggle="mobile-menu" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-800 dark:text-gray-500 hover:text-gray-500 rounded-lg md:hidden hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-900" aria-controls="mobile-menu" aria-expanded="false">
+                            <span class="sr-only">Open main menu</span>
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                            </svg>
+                            <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                        <div class="w-full md:block md:w-auto hidden" id="mobile-menu">
+                            <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-bold">
+                                <li>
+                                    <a href="#about" class="rounded-md hover:bg-gray-800/20 block py-2 pr-4 pl-3 dark:hover:bg-gray-700/50" aria-current="page">About</a>
+                                </li>
+                                <li>
+                                    <a href="#registration" class="rounded-md hover:bg-gray-800/20 block py-2 pr-4 pl-3 dark:hover:bg-gray-700/50">Register</a>
+                                </li>
+                                <li>
+                                    <a href="#gallery" class="rounded-md hover:bg-gray-800/20 block py-2 pr-4 pl-3 dark:hover:bg-gray-700/50">Gallery</a>
+                                </li>
+                                <li>
+                                    <a href="#conference-activities" class="rounded-md hover:bg-gray-800/20 block py-2 pr-4 pl-3 dark:hover:bg-gray-700/50">Activities</a>
+                                </li>
+                                <li>
+                                    <a href="#contact" class="rounded-md hover:bg-gray-800/20 block py-2 pr-4 pl-3 dark:hover:bg-gray-700/50">Contact</a>
+                                </li>
+                                <li class="flex">
+
+                                    <!-- <span class=" block py-2 pl-3 self-center dark:text-white ">Switch Theme</span> -->
+                                    <button id="theme-toggle" type="button" class="py-2 pr-4  pl-3 dark:hover:bg-gray-700/50 hover:bg-gray-800/20 focus:outline-none focus:ring-4 focus:ring-gray-700 rounded-lg text-sm p-2.5 px-5 text-center inline-flex items-center">
+                                        <span class="pr-4 button-text">Switch Theme</span>
+                                        <svg id="theme-toggle-dark-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z">
+                                            </path>
+                                        </svg>
+                                        <svg id="theme-toggle-light-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd">
+                                            </path>
+                                        </svg>
+
+                                    </button>
+
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </nav>
-                <section>
-                    <button id="theme-toggle" type="button" title="Toggle theme"
-                        class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
-                        <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-                        </svg>
-                        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-                                fill-rule="evenodd" clip-rule="evenodd"></path>
-                        </svg>
-                    </button>
-                </section>
+
             </header>
 
-            <section>
-                <h1>IEE NIGERIA CONFERENCE 2022</h1>
-                <p>DBI INSTITUTE, LAGOS | JUNE 9TH - 11TH, 2022</p>
-                <a href="">JOIN NOW</a>
-            </section>
+            <!-- section 1 -->
+            <div class="jumbotron backg__img">
+                <div class="jumbotron-inner maximum-width">
+                    <div class="section-1 text-white space-y-4 ml-auto mr-auto">
+                        <h1 class="font-[cursive] text-5xl font-extrabold">IEEE Nigeria <br> Conference 2022</h1>
+                        <p class="text-gray-900 font-semibold">DBI Institue, Lagos | JUNE 9TH - 11TH, 2022</p>
+                        <button type="button" href="" class="transition-all ease-in-out font-semibold border focus:outline-none focus:ring-4 rounded-full text-sm px-5 py-2.5 mr-2 mb-2 bg-gray-800 text-white border-gray-600 hover:bg-gray-900 hover:border-gray-900/50 focus:ring-gray-800">JOIN
+                            NOW
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- section 1 -->
+
+
         </section>
+        <!--Hero Section ends-->
+
+        <!--About Section Begins-->
         <section id="about" class="flex justify-center items-center px-4">
             <div class="flex justify-center flex-wrap lg:max-w-4xl md:max-w-3xl sm:px-4 lg:px-0 md:space-x-12">
                 <section class="flex-1 py-6">
@@ -122,9 +167,12 @@
                     <div class="sm:text-center md:text-left"><button class="transition-all ease-in-out bg-lightGreen/80 text-gray-900 hover:bg-lightGreen font-bold py-2 rounded-full px-4 md:w-full lg:w-auto sm:w-1/2 sm:text-lg focus:ring-4 focus:outline-none focus:ring-lightGreen/80">Read more</button></div>
             
                 </section>
-                <img src="../../assets/conference.jpg" alt="About STECON 2022" class="flex-1 md:max-w-[50%] rounded-lg shadow-lg shadow-black">
+                <img src="assets/conference.jpg" alt="About STECON 2022" class="flex-1 md:max-w-[50%] rounded-lg shadow-lg shadow-black">
             </div>
         </section>
+        <!--About Section Ends-->
+
+        <!--Registration Section Begins-->
         <section id="registration"
             class="text-gray-900 bg-gradient-to-r from-lightGreen to-darkGreen mt-6 flex items-center flex-wrap justify-around py-8 px-4">
             <section class="shrink text-center">
@@ -175,6 +223,9 @@
                 </section>
             </section>
         </section>
+        <!--Registration Section Ends-->
+
+        <!--Gallery Section Begins-->
         <section id="gallery"
             class="md:flex justify-center items-center py-6 px-4 text-gray-900 dark:text-gray-200">
             <div class="md:flex justify-center flex-wrap lg:max-w-md md:max-w-3xl sm:px-4 lg:px-0 md:space-x-12">
@@ -207,20 +258,20 @@
                         <span
                             class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">First
                             Slide</span>
-                        <img src="../../assets/logo.png"
+                        <img src="assets/logo.png"
                             class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
                     </div>
                     <!-- Item 2 -->
                     <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20"
                         data-carousel-item="">
-                        <img src="../../assets/about-image.jpg"
+                        <img src="assets/about-image.jpg"
                             class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="..." style="
         ">
                     </div>
                     <!-- Item 3 -->
                     <div class="duration-700 ease-in-out absolute inset-0 transition-all transform z-10 translate-x-full"
                         data-carousel-item="">
-                        <img src="../../assets/hero-background.png"
+                        <img src="assets/hero-background.png"
                             class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
                     </div>
                 </div>
@@ -264,6 +315,9 @@
                 </button>
             </div>
         </section>
+        <!--Gallery Section Ends-->
+
+        <!--Conference Activities Section Begins-->
         <section id="conference-activities" class="">
         <h2 class="pt-4 text-3xl font-extrabold uppercase tracking-widest text-gray-800 text-center bg-gradient-to-r from-lightGreen to-darkGreen border-b-2 border-solid border-white dark:border-gray-900">Conference Activites</h2>
         <section class="md:flex">    
@@ -386,6 +440,9 @@
                 </section>
             </section>
         </section>
+        <!--Conference Activities Section Endsins-->
+        
+        <!--Contact Section Begins-->
         <section id="contact"
             class="md:flex justify-center items-center py-8 px-4 dark:bg-slate-900 text-gray-800 dark:text-gray-200 flex-wrap">
             <div class="md:flex justify-around items-center w-full flex-wrap space-y-10 text-center">
@@ -444,13 +501,14 @@
                     <h3 class="font-bold text-xl mb-4">SOCIALS</h3>
         
                     <ul class="flex flex-col gap-3 text-xs">
-                        <li><a href="http://fb.me/stecon2022">Facebook</a></li>
-                        <li><a href="https://twitter.com/stecon2022">Twitter</a></li>
-                        <li><a href="http://instagram.com/stecon2022">Instagram</a></li>
+                        <li><a href="http://fb.me/stecon2022" class="hover:underline">Facebook</a></li>
+                        <li><a href="https://twitter.com/stecon2022" class="hover:underline">Twitter</a></li>
+                        <li><a href="http://instagram.com/stecon2022" class="hover:underline">Instagram</a></li>
                     </ul>
                 </section>
             </div>
         </section>
+        <!--Contact Section Ends-->
     </main>
 
     <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
