@@ -75,8 +75,8 @@ const jumpToBottom = () => {
 
 // Change the icons inside the button based on previous settings
 if (
-    localStorage.getItem("ascf-theme") === "dark" ||
-    (!("ascf-theme" in localStorage) &&
+    localStorage.getItem("ieee-stecon-theme") === "dark" ||
+    (!("ieee-stecon-theme" in localStorage) &&
         window.matchMedia("(prefers-color-scheme: dark)").matches)
 ) {
     themeToggleLightIcon.classList.remove("hidden");
@@ -92,23 +92,23 @@ const toggleThemeMode = () => {
     themeToggleLightIcon.classList.toggle("hidden");
 
     // if set via local storage previously
-    if (localStorage.getItem("ascf-theme")) {
-        if (localStorage.getItem("ascf-theme") === "light") {
+    if (localStorage.getItem("ieee-stecon-theme")) {
+        if (localStorage.getItem("ieee-stecon-theme") === "light") {
             document.documentElement.classList.add("dark");
-            localStorage.setItem("ascf-theme", "dark");
+            localStorage.setItem("ieee-stecon-theme", "dark");
         } else {
             document.documentElement.classList.remove("dark");
-            localStorage.setItem("ascf-theme", "light");
+            localStorage.setItem("ieee-stecon-theme", "light");
         }
 
         // if NOT set via local storage previously
     } else {
         if (document.documentElement.classList.contains("dark")) {
             document.documentElement.classList.remove("dark");
-            localStorage.setItem("ascf-theme", "light");
+            localStorage.setItem("ieee-stecon-theme", "light");
         } else {
             document.documentElement.classList.add("dark");
-            localStorage.setItem("ascf-theme", "dark");
+            localStorage.setItem("ieee-stecon-theme", "dark");
         }
     }
 };

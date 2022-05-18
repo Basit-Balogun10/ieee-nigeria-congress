@@ -38,8 +38,8 @@
 
         // On page load or when changing themes, best to add inline in `head` to avoid FOUC
         if (
-            localStorage.getItem('ascf-theme') === 'dark' ||
-            (!('ascf-theme' in localStorage) &&
+            localStorage.getItem('ieee-stecon-theme') === 'dark' ||
+            (!('ieee-stecon-theme' in localStorage) &&
                 window.matchMedia('(prefers-color-scheme: dark)').matches)
         ) {
             document.documentElement.classList.add('dark');
@@ -155,7 +155,7 @@
         <!--Hero Section-->
 
 
-       
+
     </main>
 
     <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>

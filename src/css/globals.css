@@ -43,7 +43,7 @@ a {
 
 #hero{
     min-height: 70vh;
-    background: url(../../assets/hero-background.png) #57aa46;
+    background: url(../../assets/hero-background.png) #57aa46ad;
     background-blend-mode: overlay;
     background-repeat: no-repeat;
     background-position: center;
