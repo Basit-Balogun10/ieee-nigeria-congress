@@ -12,18 +12,7 @@ a {
     top: calc(50% - 4px);
     border-radius: 15px 15px 0px 0;
 }
-@media(min-width:768px){
-    .maximum-width{
-           max-width: 900px;
-   margin-left: auto;
-   margin-right: auto;
-   }
-}
-@media(min-width:768px){
-    .button-text{
-           display: none;
-   }
-}
+
 .jumbotron {
     height: 55vh;
     margin-bottom: 50px;
@@ -49,3 +38,9 @@ a {
     background-position: center;
     background-size: cover;
 }
+
+.logo-container {
+background-size: cover;
+background-repeat: no-repeat no-repeat;
+background-blend-mode: multiply;
+background-position: center center;}
