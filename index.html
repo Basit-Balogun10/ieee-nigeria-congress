@@ -11,7 +11,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&family=Inter&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&family=Secular+One&display=swap" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.1/dist/flowbite.min.css" />
     <link rel="stylesheet" href="src/css/reset.css" />
@@ -23,7 +23,7 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        inter: ['Inter', 'sans-serif'],
+                        secularOne: ['Secular One', 'sans-serif'],
                         poppins: ['Poppins', 'sans-serif'],
                     },
                     colors: {
@@ -66,11 +66,17 @@
                 <nav
                     class="text-gray-900 dark:text-gray-200 md:dark:text-gray-800 md:text-gray-800 bg-white dark:bg-gray-800 dark:md:bg-transparent md:bg-transparent border-gray-200 px-2 sm:px-4 py-2.5 rounded backg__img">
                     <div class="flex flex-wrap justify-between items-center px-4 pt-2">
-                        <div href="" class="flex items-center w-2/5 md:mx-auto">
+                        <div href="" class="flex items-center md:w-2/5 md:mx-auto">
                             <!--IEEE Logo Image-->
-                            <div class="logo-container mr-3 w-28 h-6 dark:bg-gray-800 bg:white dark:md:bg-[#C3FAAB] md:bg-[#C3FAAB] md:h-9 bg-[url('./assets/IEEE-Nigeria.png')]"></div>
-                            <div class="logo-container mr-3 w-28 h-6 dark:bg-gray-800 bg:white dark:md:bg-[#C3FAAB] md:bg-[#C3FAAB] md:h-9 bg-[url('./assets/IEEE-Student-Nigeria.png')]"></div>
-                            <div class="logo-container mr-3 w-28 h-6 dark:bg-gray-800 bg:white dark:md:bg-[#C3FAAB] md:bg-[#C3FAAB] md:h-9 bg-[url('./assets/STECON-logo.png')]"></div>
+                            <div
+                                class="logo-container mr-3 w-24 md:w-28 h-12 bg-cover dark:bg-gray-800 bg:white dark:md:bg-[#C3FAAB] md:bg-[#C3FAAB] md:h-9 bg-[url('./assets/IEEE-Nigeria.png')]">
+                            </div>
+                            <div
+                                class="logo-container mr-3 hidden md:block md:w-28 h-12 bg-cover dark:bg-gray-800 bg:white dark:md:bg-[#C3FAAB] md:bg-[#C3FAAB] md:h-9 bg-[url('./assets/IEEE-Student-Nigeria.png')]">
+                            </div>
+                            <div
+                                class="logo-container mr-3 w-28 md:w-28 h-12 bg-cover dark:bg-gray-800 bg:white dark:md:bg-[#C3FAAB] md:bg-[#C3FAAB] md:h-9 bg-[url('./assets/STECON-logo.png')]">
+                            </div>
                         </div>
                         <button data-collapse-toggle="mobile-menu" type="button"
                             class="inline-flex items-center p-2 ml-3 text-sm text-gray-800 dark:text-gray-500 hover:text-gray-500 rounded-lg md:hidden hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-900"
@@ -145,12 +151,15 @@
             <div class="jumbotron backg__img">
                 <div class="jumbotron-inner maximum-width">
                     <div class="section-1 text-gray-900 space-y-4 ml-auto mr-auto">
-                        <h1 class="text-5xl font-extrabold">IEEE Nigeria <br> Conference 2022</h1>
-                        <p class="text-gray-900 font-semibold">DBI Institute, Lagos | JUNE 9TH - 11TH, 2022</p>
+                        <h1 class="text-5xl md:text-6xl font-extrabold font-secularOne">IEEE Nigeria<br>Students Congress
+                            2022</h1>
+                        <div>
+                            <p class="text-gray-900 font-semibold md:inline">DBI Institute, Cappa, Oshodi, Lagos </p>
+                            <span class="hidden md:inline">|</span>
+                            <p class="text-gray-900 font-semibold md:inline"> JUNE 9TH - 11TH, 2022</p>
+                        </div>
                         <a type="button" href="https://bit.ly/3LEMVYM"
-                            class="transition-all ease-in-out font-semibold border focus:outline-none focus:ring-4 rounded-full text-sm px-5 py-2.5 mr-2 mb-2 bg-gray-800 text-white border-gray-600 hover:bg-gray-900 hover:border-gray-900/50 focus:ring-gray-800">JOIN
-                            NOW
-                        </a>
+                            class="transition-all ease-in-out font-semibold border focus:outline-none focus:ring-4 rounded-md text-sm px-5 py-2.5 mr-2 mb-2 bg-gray-900 text-lightGreen border-gray-600  focus:ring-gray-800 shadow-gray-400 shadow-inner hover:shadow-none hover:text-lg">RESERVE A SEAT NOW</a>
                     </div>
                 </div>
             </div>
@@ -199,8 +208,7 @@
                     </div>
 
                     <div class="text-center md:text-left"><a href="https://bit.ly/3LEMVYM"
-                            class="transition-all ease-in-out bg-lightGreen/80 text-gray-900 hover:bg-lightGreen font-bold py-2 rounded-md px-4 md:w-full lg:w-auto sm:w-1/2 sm:text-lg focus:ring-4 focus:outline-none focus:ring-lightGreen/80">Join
-                            now</a></div>
+                            class="transition-all ease-in-out bg-[#6dbf6f] text-gray-900 font-semibold py-2 rounded px-4 md:w-full lg:w-auto sm:w-1/2 sm:text-lg focus:ring-4 focus:outline-none focus:ring-green-600 border-solid border border-green-500">JOIN US TODAY</a></div>
 
                 </section>
                 <img src="assets/conference.jpg" alt="About STECON 2022"
@@ -222,7 +230,7 @@
                 </p>
 
                 <a href="https://bit.ly/3LEMVYM"
-                    class="bg-transparent hover:bg-gray-900 text-gray-900 font-semibold hover:text-white py-2 px-4 border-2 border-solid border-gray-900 rounded hover:border-transparent transition-all ease-in-out delay-50 focus:ring-4 focus:outline-none focus:ring-gray-900/90"
+                    class="bg-gray-900 hover:bg-gray-800 text-white font-bold  py-2 px-4 border-2 border-solid border-gray-900 hover:border-gray-800 rounded transition-colors ease-in-out delay-50 focus:ring-4 focus:outline-none focus:ring-gray-900/90"
                     style="">SIGN ME UP</a>
             </section>
             <section
