@@ -11,11 +11,11 @@ window.onscroll = () => {
     toggleJumpBtn();
 };
 window.onload = () => {
-    updateCountdown();
+    // updateCountdown();
 };
 
 const updateCountdown = () => {
-    const conferenceDate = new Date("06/09/2022");
+    const conferenceDate = new Date("07/29/2022");
 
     const updateUI = () => {
         const now = new Date();
