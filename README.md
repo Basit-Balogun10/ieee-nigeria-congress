@@ -1,4 +1,4 @@
-This is a *single-page* website created for the **IEEE-NIGERIA CONFERENCE 2022.**
+This is a *single-page* website created for the **IEEE-NIGERIA CONGRESS 2022.**
 https://ieee-nigeria-students-congress-2022.netlify.app/
 
 # Getting Started
